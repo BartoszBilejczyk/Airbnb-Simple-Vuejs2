@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-
+    <v-container>Hello world</v-container>
   </div>
 </template>
 
@@ -10,6 +10,17 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-  @import './stylus/main'
+<style lang="scss">
+
+@import './assets/styles/main.scss';
+
+html, body {
+  font-family: 'Montserrat', sans-serif !important;
+  box-sizing: border-box;
+}
+
+p, span {
+  font-family: 'Roboto', sans-serif !important;
+}
+
 </style>
