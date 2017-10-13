@@ -1,19 +1,19 @@
 <template lang="html">
-  <div>
-    <li>Item{{ propFromNavigationContainer }}</li>
-  </div>
+  <v-card>sa</v-card>
 </template>
 
 <script>
 export default {
-  name: 'NavigationItem',
+  name: 'SearchItem',
   props: {
-    name: {
-      type: String
+    where: String,
+    when: Date,
+    guestsAmount: {
+      type: Number,
+      default: 1
       // required: true
     }
   }
-
 }
 </script>
 

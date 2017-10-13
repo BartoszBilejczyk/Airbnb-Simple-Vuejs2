@@ -1,10 +1,27 @@
 <template lang="html">
+  <div>
+    <v-container>
+      <NavigationContainer></NavigationContainer>
+      Airbnb
+      Book unique homes and experience a city like a local
 
+      <SearchContainer></SearchContainer>
+    </v-container>
+
+
+  </div>
 </template>
 
 <script>
-export default {
+import NavigationContainer from './containers/NavigationContainer'
+import SearchContainer from './containers/SearchContainer'
 
+export default {
+  name: 'Header',
+  components: {
+    NavigationContainer,
+    SearchContainer
+  }
 }
 </script>
 

@@ -1,10 +1,21 @@
 <template lang="html">
-
+  <PlacesListFeaturedName></PlacesListFeaturedName>
+  <ButtonSeeAll></ButtonSeeAll>
+  <PlacesListItem v-for=""></PlacesListItem>
 </template>
 
 <script>
-export default {
+import PlacesListFeaturedName from '../PlacesListFeaturedName'
+import ButtonSeeAll from '../ButtonSeeAll'
+import PlacesListItem from '../PlacesListItem'
 
+export default {
+  name: 'PlacesListFeaturedContainer';
+  components: {
+    PlacesListFeaturedName,
+    ButtonSeeAll,
+    PlacesListItem
+  }
 }
 </script>
 

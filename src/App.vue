@@ -1,12 +1,24 @@
 <template>
   <div id="app">
-    <v-container>Hello world</v-container>
+    <Header />
+    \daskjdas
+    <PlacesHomepage />
+    <Footer />
   </div>
 </template>
 
 <script>
+import Header from './components/Header'
+import PlacesHomepage from './components/PlacesHomepage'
+import Footer from './components/Footer'
+
 export default {
-  name: 'app'
+  name: 'App',
+  components: {
+    Header,
+    PlacesHomepage,
+    Footer
+  }
 }
 </script>
 
