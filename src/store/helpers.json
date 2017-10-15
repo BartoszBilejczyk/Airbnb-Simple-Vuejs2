@@ -1,0 +1,84 @@
+{
+  "cities": {
+    "warsaw": {
+      "city": "Warsaw",
+      "country": "Poland"
+    },
+    "paris": {
+      "city": "Paris",
+      "country": "France"
+    },
+    "newyork": {
+      "city": "New York",
+      "country": "USA"
+    }
+  },
+  "offers": {
+    "offer1": {
+      "id": 2132131,
+      "numberOfRooms": 2,
+      "numberOfGuests": 4,
+      "city": "Warsaw",
+      "price": 199,
+      "name": "House Warsaw 1",
+      "rating": 4.5,
+      "numberOfRatings": 123,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    },
+    "offer2": {
+      "id": 2132131,
+      "numberOfRooms": 2,
+      "numberOfGuests": 4,
+      "city": "Warsaw",
+      "price": 299,
+      "name": "House Warsaw 2",
+      "rating": 4.5,
+      "numberOfRatings": 123,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    },
+    "offer3": {
+      "id": 2132131,
+      "numberOfRooms": 2,
+      "numberOfGuests": 4,
+      "city": "Paris",
+      "price": 399,
+      "name": "House Paris 1",
+      "rating": 4.5,
+      "numberOfRatings": 123,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    },
+    "offer4": {
+      "id": 2132131,
+      "numberOfRooms": 2,
+      "numberOfGuests": 4,
+      "city": "Paris",
+      "price": 499,
+      "name": "House Paris 2",
+      "rating": 4.5,
+      "numberOfRatings": 123,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    },
+    "offer5": {
+      "id": 2132131,
+      "numberOfRooms": 2,
+      "numberOfGuests": 4,
+      "city": "New York",
+      "price": 999,
+      "name": "House New York 1",
+      "rating": 4.5,
+      "numberOfRatings": 123,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    },
+    "offer6": {
+      "id": 2132131,
+      "numberOfRooms": 2,
+      "numberOfGuests": 4,
+      "city": "New York",
+      "price": 222,
+      "name": "House New York 1",
+      "rating": 4.5,
+      "numberOfRatings": 123,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    }
+  }
+}

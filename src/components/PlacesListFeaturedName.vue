@@ -1,10 +1,15 @@
 <template lang="html">
-
+  <span>{{ city }}</span>
 </template>
 
 <script>
 export default {
-
+  name: 'PlacesListFeaturedName',
+  props: {
+    city: {
+      type: String
+    }
+  }
 }
 </script>
 

@@ -1,7 +1,16 @@
 <template lang="html">
-  <PlacesListFeaturedName></PlacesListFeaturedName>
-  <ButtonSeeAll></ButtonSeeAll>
-  <PlacesListItem v-for=""></PlacesListItem>
+  <div class="">
+    <PlacesListFeaturedName :city="cities[index].city"></PlacesListFeaturedName>
+    <ButtonSeeAll></ButtonSeeAll>
+    <v-layout>
+      <v-flex>
+        <PlacesListItem
+          v-for="(i, offerIndex) in 4"
+          :offers="offers"
+          :offerIndex="offerIndex"></PlacesListItem>
+      </v-flex>
+    </v-layout>
+  </div>
 </template>
 
 <script>
@@ -10,7 +19,21 @@ import ButtonSeeAll from '../ButtonSeeAll'
 import PlacesListItem from '../PlacesListItem'
 
 export default {
-  name: 'PlacesListFeaturedContainer';
+  name: 'PlacesListFeaturedContainer',
+  props: {
+    cities: {
+      type: Array,
+      required: true
+    },
+    index: {
+      type: Number,
+      required: true
+    },
+    offers: {
+      type: Array,
+      required: true
+    }
+  },
   components: {
     PlacesListFeaturedName,
     ButtonSeeAll,

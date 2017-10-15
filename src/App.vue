@@ -1,23 +1,23 @@
 <template>
   <div id="app">
-    <Header />
+    <VHeader />
     \daskjdas
     <PlacesHomepage />
-    <Footer />
+    <VFooter />
   </div>
 </template>
 
 <script>
-import Header from './components/Header'
+import VHeader from './components/vHeader'
 import PlacesHomepage from './components/PlacesHomepage'
-import Footer from './components/Footer'
+import VFooter from './components/vFooter'
 
 export default {
   name: 'App',
   components: {
-    Header,
+    VHeader,
     PlacesHomepage,
-    Footer
+    VFooter
   }
 }
 </script>
