@@ -8,7 +8,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    navigationItems: [
+      {name: 'Discover hosting', link: '#'},
+      {name: 'Sign up', link: '#'},
+      {name: 'Log in', link: '#'}
+    ]
   },
   actions,
   getters,

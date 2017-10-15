@@ -1,12 +1,11 @@
 <template lang="html">
-  <section>
+  <v-container tag="section">
     <PlacesListFeaturedContainer
       v-for="(city, index) in cities"
       :index="index"
       key="city.city"
-      :cities="cities"
-      :offers="offers"></PlacesListFeaturedContainer>
-  </section>
+      :cities="cities"></PlacesListFeaturedContainer>
+  </v-container tag="section">
 </template>
 
 <script>
@@ -21,8 +20,7 @@ export default {
     PlacesListFeaturedContainer
   },
   firebase: {
-    cities: db.ref('cities'),
-    offers: db.ref('offers')
+    cities: db.ref('cities')
   },
   computed: {
 

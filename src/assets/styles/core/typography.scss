@@ -1,0 +1,44 @@
+.airbnb {
+  &-heading {
+    color: pal(brand, copy);
+
+    &--primary {
+      @include font(45, 300);
+    }
+    &--secondary {
+      @include font(30, 400);
+    }
+    &--tertiary {
+
+    }
+    &--section {
+
+    }
+    &--subsection {
+
+    }
+
+    &--brand {
+      color: pal(brand, pink);
+    }
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+
+  &-subheading {
+
+  }
+
+  &-copy {
+    color: pal(brand, copy);
+
+    &--large {
+
+    }
+    &--small {
+
+    }
+  }
+}

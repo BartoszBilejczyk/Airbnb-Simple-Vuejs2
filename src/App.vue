@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" v-cloak>
     <VHeader />
     \daskjdas
     <PlacesHomepage />
@@ -29,10 +29,21 @@ export default {
 html, body {
   font-family: 'Montserrat', sans-serif !important;
   box-sizing: border-box;
+  overflow-x: hidden !important;
 }
 
 p, span {
   font-family: 'Roboto', sans-serif !important;
+}
+
+a {
+  color: pal(brand, copy) !important;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 </style>

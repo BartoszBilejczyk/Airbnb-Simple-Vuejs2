@@ -1,5 +1,5 @@
 <template lang="html">
-  <p>see all</p>
+  <p>See all</p>
 </template>
 
 <script>

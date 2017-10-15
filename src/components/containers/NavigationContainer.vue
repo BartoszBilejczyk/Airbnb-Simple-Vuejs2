@@ -1,10 +1,18 @@
 <template lang="html">
-  <div>
-    <LogoItem></LogoItem>
-    <ul>
-      <NavigationItem v-for="i in 3"></NavigationItem>
-    </ul>
-  </div>
+  <v-layout class="airbnb-navigation-wrapper" row align-center justify-space-around>
+    <v-flex>
+      <LogoItem></LogoItem>
+    </v-flex>
+
+    <v-layout class="airbnb-navigation" tag="ul" row justify-end>
+        <NavigationItem
+          class="airbnb-navigation__item"
+          v-for="item in navigationItems"
+          :key="item.name"
+          :navigationItem="item"
+          ></NavigationItem>
+    </v-layout>
+  </v-layout>
 </template>
 
 <script>
@@ -19,7 +27,9 @@ export default {
     NavigationItem
   },
   computed: {
-    // navigation items from store
+    navigationItems() {
+      return this.$store.state.navigationItems
+    }
   }
 }
 </script>
@@ -27,5 +37,22 @@ export default {
 <style lang="scss">
 
 @import '../../assets/styles/main.scss';
+
+.airbnb {
+  &-navigation {
+    padding: 0;
+    margin: 0;
+
+    &-wrapper {
+
+    }
+
+    &__item {
+      padding: 10px;
+      list-style: none;
+      @include font(14, 300);
+    }
+  }
+}
 
 </style>

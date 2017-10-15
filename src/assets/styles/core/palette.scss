@@ -15,7 +15,7 @@ $palette-colors: (
   ),
   white: (
     x-light: #f6f6f6,
-    light: #e7e7ec,
+    light: #e4e4e4,
     light-dark: #ddd,
     base: #fff,
     mid-dark: #c1c1d0,
@@ -37,11 +37,6 @@ $palette-colors: (
     base: #060a34,
     dark: #040629
   ),
-  pink: (
-    light: #e0358e,
-    base: #bf2e8c,
-    dark: #8c2b8a
-  ),
   purple: (
     light: #5d2675,
     light-dark: #351e59,
@@ -55,11 +50,16 @@ $palette-colors: (
   red: (
     base: #ce000e
   ),
-  static: (
-    orange: rgb(254, 149, 38),
-    red: rgb(253, 61, 57),
-    green: rgb(83, 216, 106),
-    blue: rgb(22, 127, 252)
+  brand: (
+    pink: #fd5c63,
+    pinkLight: #ff7e82,
+    pinkDark: #dd041a,
+    orange: #feb32b,
+    orangeLight: #fec245,
+    green: #42a951,
+    cyan: #118488,
+    copy: #484848,
+    copyInactive: #767676,
   )
 );
 

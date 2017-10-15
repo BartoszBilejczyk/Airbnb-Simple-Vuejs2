@@ -1,16 +1,16 @@
 <template lang="html">
-  <div>
-    <li>Item{{ propFromNavigationContainer }}</li>
-  </div>
+  <li>
+    <router-link :to="navigationItem.link">{{ navigationItem.name }}</router-link>
+  </li>
 </template>
 
 <script>
 export default {
   name: 'NavigationItem',
   props: {
-    name: {
-      type: String
-      // required: true
+    navigationItem: {
+      type: Object,
+      required: true
     }
   }
 

@@ -11,11 +11,24 @@
     "newyork": {
       "city": "New York",
       "country": "USA"
+    },
+    "toronto": {
+      "city": "Toronto",
+      "country": "Canada"
+    },
+    "milan": {
+      "city": "Milan",
+      "country": "Italy"
+    },
+    "london": {
+      "city": "London",
+      "country": "UK"
     }
   },
   "offers": {
     "offer1": {
       "id": 2132131,
+      "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
       "numberOfRooms": 2,
       "numberOfGuests": 4,
       "city": "Warsaw",
@@ -27,6 +40,7 @@
     },
     "offer2": {
       "id": 2132131,
+      "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
       "numberOfRooms": 2,
       "numberOfGuests": 4,
       "city": "Warsaw",
@@ -38,6 +52,7 @@
     },
     "offer3": {
       "id": 2132131,
+      "photoURL": "https://a0.muscache.com/im/pictures/ae7de678-2533-4918-b17d-3c7d0e9c7b2b.jpg",
       "numberOfRooms": 2,
       "numberOfGuests": 4,
       "city": "Paris",
@@ -49,6 +64,7 @@
     },
     "offer4": {
       "id": 2132131,
+      "photoURL": "https://a0.muscache.com/im/pictures/ae7de678-2533-4918-b17d-3c7d0e9c7b2b.jpg",
       "numberOfRooms": 2,
       "numberOfGuests": 4,
       "city": "Paris",
@@ -60,6 +76,7 @@
     },
     "offer5": {
       "id": 2132131,
+      "photoURL": "https://a0.muscache.com/im/pictures/bb011a7c-b4ad-4c29-90bb-b29f7b654031.jpg",
       "numberOfRooms": 2,
       "numberOfGuests": 4,
       "city": "New York",
@@ -71,6 +88,7 @@
     },
     "offer6": {
       "id": 2132131,
+      "photoURL": "https://a0.muscache.com/im/pictures/bb011a7c-b4ad-4c29-90bb-b29f7b654031.jpg",
       "numberOfRooms": 2,
       "numberOfGuests": 4,
       "city": "New York",

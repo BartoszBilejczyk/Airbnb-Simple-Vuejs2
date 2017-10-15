@@ -2,8 +2,12 @@
   <div>
     <v-container>
       <NavigationContainer></NavigationContainer>
-      Airbnb
-      Book unique homes and experience a city like a local
+      <h1 class="airbnb-heading
+                 airbnb-heading--primary
+                 airbnb-heading--bold
+                 airbnb-heading--brand">Airbnb</h1>
+      <h2 class="airbnb-heading
+                 airbnb-heading--primary">Book unique homes and experience a city like a local</h2>
 
       <SearchContainer></SearchContainer>
     </v-container>
