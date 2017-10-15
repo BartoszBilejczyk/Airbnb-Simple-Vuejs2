@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 @import '../../assets/styles/main.scss';
 
@@ -48,9 +48,9 @@ export default {
     }
 
     &__item {
-      padding: 10px;
+      padding: 10px 20px;
       list-style: none;
-      @include font(14, 300);
+      @include font(11, 300);
     }
   }
 }

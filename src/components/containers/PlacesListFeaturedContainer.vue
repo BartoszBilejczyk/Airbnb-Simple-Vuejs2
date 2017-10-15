@@ -1,17 +1,17 @@
 <template lang="html">
-  <div v-cloak>
-    <PlacesListFeaturedName :city="cities[index].city"></PlacesListFeaturedName>
-    <ButtonSeeAll></ButtonSeeAll>
-    <v-layout row wrap>
-      <!-- <v-flex -->
-        <PlacesListItem
-          v-for="(offer, offerIndex) in offers"
-          :offers="offers"
-          :offer="offer"
-          :offerIndex="offerIndex"></PlacesListItem>
-      <!-- </v-flex> -->
+  <v-layout column mt-5 mb-5 tag="div" >
+    <v-layout row nowrap justify-space-between align-center mt-2 mb-2>
+      <PlacesListFeaturedName :city="fullCityName"></PlacesListFeaturedName>
+      <ButtonSeeAll></ButtonSeeAll>
     </v-layout>
-  </div>
+    <v-layout row wrap>
+      <PlacesListItem
+        v-for="(offer, offerIndex) in cityOffers"
+        :offer="offer"
+        :offerIndex="offerIndex"
+        ></PlacesListItem>
+    </v-layout>
+  </v-layout>
 </template>
 
 <script>
@@ -20,8 +20,6 @@ import {db} from '../../firebase'
 import PlacesListFeaturedName from '../PlacesListFeaturedName'
 import ButtonSeeAll from '../ButtonSeeAll'
 import PlacesListItem from '../PlacesListItem'
-
-const offersRef = db.ref('offers')
 
 export default {
   name: 'PlacesListFeaturedContainer',
@@ -41,12 +39,21 @@ export default {
     PlacesListItem
   },
   firebase: {
-    offers: offersRef
+    offers: db.ref('offers')
+    // cityOffers: db.ref(`offers/${city}`)
   },
   computed: {
-    warsawOffers() {
-      return this.offers.ref('offer1')
+    fullCityName() {
+      return this.cities[this.index].city
+    },
+    bareCityName() {
+      // lowercase city with no spaces is needed to pass in firebase node
+      return this.fullCityName.replace(/\s/g, '').toLowerCase()
     }
+  },
+  created() {
+    // this.$bindAsArray('cityOffers', db.ref(`offers/${this.city}`))
+    this.$bindAsArray('cityOffers', db.ref('offers/' + this.bareCityName).limitToLast(4))
   }
 }
 </script>

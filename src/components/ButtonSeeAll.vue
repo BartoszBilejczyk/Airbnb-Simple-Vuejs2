@@ -1,5 +1,5 @@
 <template lang="html">
-  <p>See all</p>
+  <router-link :to="{ name: '#', params: {} }">See all</router-link>
 </template>
 
 <script>

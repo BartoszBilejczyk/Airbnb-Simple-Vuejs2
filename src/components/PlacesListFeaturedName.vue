@@ -1,5 +1,5 @@
 <template lang="html">
-  <span>{{ city }}</span>
+  <h3 class="airbnb-heading--secondary">{{ city }}</h3>
 </template>
 
 <script>
@@ -16,5 +16,7 @@ export default {
 <style lang="scss">
 
 @import '../assets/styles/main.scss';
+
+
 
 </style>

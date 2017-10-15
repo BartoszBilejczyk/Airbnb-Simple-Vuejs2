@@ -18,7 +18,7 @@ export default {
 
 .airbnb {
   &-logo {
-    max-width: 150px;
+    max-width: 100px;
   }
 }
 

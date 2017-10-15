@@ -1,8 +1,6 @@
 <template lang="html">
-  <v-layout>
-    <v-flex xs12 sm4>
-      <SearchItem v-for="i in 3"></SearchItem>
-    </v-flex>
+  <v-layout row>
+    <SearchItem v-for="i in 3"></SearchItem>
   </v-layout>
 </template>
 

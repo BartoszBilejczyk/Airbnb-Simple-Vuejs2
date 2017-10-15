@@ -3,10 +3,10 @@
     color: pal(brand, copy);
 
     &--primary {
-      @include font(45, 300);
+      @include font(33, 400);
     }
     &--secondary {
-      @include font(30, 400);
+      @include font(22, 400);
     }
     &--tertiary {
 

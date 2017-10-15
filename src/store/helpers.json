@@ -15,88 +15,224 @@
     "toronto": {
       "city": "Toronto",
       "country": "Canada"
-    },
-    "milan": {
-      "city": "Milan",
-      "country": "Italy"
-    },
-    "london": {
-      "city": "London",
-      "country": "UK"
     }
   },
   "offers": {
-    "offer1": {
-      "id": 2132131,
-      "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
-      "numberOfRooms": 2,
-      "numberOfGuests": 4,
-      "city": "Warsaw",
-      "price": 199,
-      "name": "House Warsaw 1",
-      "rating": 4.5,
-      "numberOfRatings": 123,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    "warsaw": {
+      "offer1": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Warsaw",
+        "price": 199,
+        "name": "House Warsaw 1",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer2": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Warsaw",
+        "price": 299,
+        "name": "House Warsaw 2",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer3": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Warsaw",
+        "price": 199,
+        "name": "House Warsaw 3",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer4": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Warsaw",
+        "price": 299,
+        "name": "House Warsaw 4",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      }
     },
-    "offer2": {
-      "id": 2132131,
-      "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
-      "numberOfRooms": 2,
-      "numberOfGuests": 4,
-      "city": "Warsaw",
-      "price": 299,
-      "name": "House Warsaw 2",
-      "rating": 4.5,
-      "numberOfRatings": 123,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    "paris": {
+      "offer1": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Paris",
+        "price": 199,
+        "name": "House Paris 1",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer2": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Paris",
+        "price": 299,
+        "name": "House Paris 2",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer3": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Paris",
+        "price": 199,
+        "name": "House Paris 3",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer4": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Paris",
+        "price": 299,
+        "name": "House Paris 4",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      }
     },
-    "offer3": {
-      "id": 2132131,
-      "photoURL": "https://a0.muscache.com/im/pictures/ae7de678-2533-4918-b17d-3c7d0e9c7b2b.jpg",
-      "numberOfRooms": 2,
-      "numberOfGuests": 4,
-      "city": "Paris",
-      "price": 399,
-      "name": "House Paris 1",
-      "rating": 4.5,
-      "numberOfRatings": 123,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    "newyork": {
+      "offer1": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "New York",
+        "price": 199,
+        "name": "House New York 1",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer2": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "New York",
+        "price": 299,
+        "name": "House New York 2",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer3": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "New York",
+        "price": 199,
+        "name": "House New York 3",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer4": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "New York",
+        "price": 299,
+        "name": "House New York 4",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      }
     },
-    "offer4": {
-      "id": 2132131,
-      "photoURL": "https://a0.muscache.com/im/pictures/ae7de678-2533-4918-b17d-3c7d0e9c7b2b.jpg",
-      "numberOfRooms": 2,
-      "numberOfGuests": 4,
-      "city": "Paris",
-      "price": 499,
-      "name": "House Paris 2",
-      "rating": 4.5,
-      "numberOfRatings": 123,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
-    },
-    "offer5": {
-      "id": 2132131,
-      "photoURL": "https://a0.muscache.com/im/pictures/bb011a7c-b4ad-4c29-90bb-b29f7b654031.jpg",
-      "numberOfRooms": 2,
-      "numberOfGuests": 4,
-      "city": "New York",
-      "price": 999,
-      "name": "House New York 1",
-      "rating": 4.5,
-      "numberOfRatings": 123,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
-    },
-    "offer6": {
-      "id": 2132131,
-      "photoURL": "https://a0.muscache.com/im/pictures/bb011a7c-b4ad-4c29-90bb-b29f7b654031.jpg",
-      "numberOfRooms": 2,
-      "numberOfGuests": 4,
-      "city": "New York",
-      "price": 222,
-      "name": "House New York 1",
-      "rating": 4.5,
-      "numberOfRatings": 123,
-      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+    "toronto": {
+      "offer1": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Toronto",
+        "price": 199,
+        "name": "House Toronto 1",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer2": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Toronto",
+        "price": 299,
+        "name": "House Toronto 2",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer3": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Toronto",
+        "price": 199,
+        "name": "House Toronto 3",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      },
+      "offer4": {
+        "id": 2132131,
+        "photoURL": "https://a0.muscache.com/im/pictures/dbbe09bf-198d-45c6-902c-820d6af399f4.jpg",
+        "type": "Entire house",
+        "numberOfRooms": 2,
+        "numberOfGuests": 4,
+        "city": "Toronto",
+        "price": 299,
+        "name": "House Toronto 4",
+        "rating": 4.5,
+        "numberOfRatings": 123,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur nulla expedita mollitia iure, iusto alias. Aliquid harum non est at perspiciatis debitis voluptate fugit, dignissimos delectus veniam enim nostrum amet."
+      }
     }
   }
 }

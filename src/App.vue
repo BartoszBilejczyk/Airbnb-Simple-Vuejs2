@@ -1,7 +1,6 @@
 <template>
   <div id="app" v-cloak>
     <VHeader />
-    \daskjdas
     <PlacesHomepage />
     <VFooter />
   </div>
@@ -27,7 +26,7 @@ export default {
 @import './assets/styles/main.scss';
 
 html, body {
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: 'Raleway', sans-serif !important;
   box-sizing: border-box;
   overflow-x: hidden !important;
 }
