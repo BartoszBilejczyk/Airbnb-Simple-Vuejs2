@@ -10,7 +10,7 @@
     <v-container>
       <transition name="fade">
         <!-- used for homepage / offer page -->
-        <router-view name="page-router-view" :room-id="$route.params.roomId" :key="$route.params.roomId"></router-view>
+        <router-view name="page-router-view" :city="$route.params.city" :room-id="$route.params.roomId" :key="$route.params.roomId"></router-view>
         <!-- used for offer listings -->
         <router-view name="list-router-view" :city="$route.params.city" :country="$route.params.country" :key="$route.params.city"></router-view>
         <!-- used for offer listings when searching -->

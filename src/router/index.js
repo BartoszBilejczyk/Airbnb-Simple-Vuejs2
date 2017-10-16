@@ -24,7 +24,8 @@ export default new Router({
     },
     {
       name: 'offer',
-      path: '/rooms/:room-id',
+      path: '/:city/rooms/:roomId',
+      // path: '/rooms/',
       components: {
         'page-router-view': OfferContainer
       }

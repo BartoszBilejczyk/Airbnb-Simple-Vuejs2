@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-layout row tag="div">
+  <v-layout row wrap tag="div">
     <PlacesListItem
       v-for="offer in cityOffers"
       :key="offer.id"

@@ -1,7 +1,9 @@
 <template lang="html">
-  <v-flex xs12 sm6 md3 pl-2 pr-2
+  <v-flex xs12 sm6 md3 pl-2 pr-2 pt-2 pb-2
        class="airbnb-offer--small">
-    <img src="https://a0.muscache.com/im/pictures/ae7de678-2533-4918-b17d-3c7d0e9c7b2b.jpg" class="airbnb-offer__image--small" alt="">
+    <router-link :to="{name: 'offer', params: {city: city, roomId: offer.id}}">
+      <img src="https://a0.muscache.com/im/pictures/ae7de678-2533-4918-b17d-3c7d0e9c7b2b.jpg" class="airbnb-offer__image--small" alt="">
+    </router-link>
     <v-layout column>
       <span>{{ offer.type }} | {{ offer.numberOfRooms }} Beds | {{ offer.numberOfGuests }} Guests</span>
       <span>{{ offer.name }}</span>
@@ -21,6 +23,10 @@ export default {
   props: {
     offer: {
       type: Object,
+      required: true
+    },
+    city: {
+      type: String,
       required: true
     }
   }
