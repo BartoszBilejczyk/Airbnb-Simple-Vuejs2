@@ -9,7 +9,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      name: 'places-homepage',
+      name: 'homepage',
       path: '/',
       components: {
         'page-router-view': MainHomepage

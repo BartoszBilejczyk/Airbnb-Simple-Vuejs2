@@ -1,9 +1,11 @@
 <template lang="html">
-  <img
-    class="airbnb-logo"
-    src="../assets/images/airbnb-logo.png"
-    alt=""
-    >
+  <router-link :to="{ name: 'homepage', params: {} }">
+    <img
+      class="airbnb-logo"
+      src="../assets/images/airbnb-logo.png"
+      alt=""
+      >
+  </router-link>
 </template>
 
 <script>
