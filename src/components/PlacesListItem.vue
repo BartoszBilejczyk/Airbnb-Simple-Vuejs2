@@ -19,36 +19,11 @@
 // import {db} from '../firebase'
 export default {
   props: {
-    offerIndex: {
-      type: Number,
-      required: true
-    },
     offer: {
       type: Object,
       required: true
     }
   }
-  // firebase: {
-  //   offers: db.ref('offers/').child('offer1')
-  // }
-  // methods: {
-  //   createUsedProps() {
-  //     let properties = {
-  //       photoURL: this.offers[this.offerIndex].photoURL,
-  //       numberOfRooms: this.offers[this.offerIndex].numberOfRooms,
-  //       numberOfGuests: this.offers[this.offerIndex].numberOfGuests,
-  //       rating: this.offers[this.offerIndex].rating,
-  //       name: this.offers[this.offerIndex].name,
-  //       numberOfRatings: this.offers[this.offerIndex].numberOfRatings,
-  //       price: this.offers[this.offerIndex].price,
-  //       city: this.offers[this.offerIndex].city
-  //     }
-  //     return properties
-  //   }
-  // },
-  // created() {
-  //   this.createUsedProps()
-  // }
 }
 </script>
 

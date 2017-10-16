@@ -7,13 +7,16 @@
     <router-view name="page-router-view"></router-view>
     <router-view name="search-router-view" :type="'page'" :mode="'search'" :key="$route.params.query"></router-view> -->
 
-
-    <!-- used for homepage / offer page -->
-    <router-view name="page-router-view" :room-id="$route.params.roomId" :key="$route.params.roomId"></router-view>
-    <!-- used for offer listings -->
-    <router-view name="list-router-view" :city="$route.params.city" :country="$route.params.country" :key="$route.params.city"></router-view>
-    <!-- used for offer listings when searching -->
-    <router-view name="search-router-view" :mode="'search'" :key="$route.params.query"></router-view>
+    <v-container>
+      <transition name="fade">
+        <!-- used for homepage / offer page -->
+        <router-view name="page-router-view" :room-id="$route.params.roomId" :key="$route.params.roomId"></router-view>
+        <!-- used for offer listings -->
+        <router-view name="list-router-view" :city="$route.params.city" :country="$route.params.country" :key="$route.params.city"></router-view>
+        <!-- used for offer listings when searching -->
+        <router-view name="search-router-view" :mode="'search'" :key="$route.params.query"></router-view>
+      </transition>
+    </v-container>
 
     <VFooter />
   </div>
@@ -58,4 +61,14 @@ img {
   max-width: 100%;
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition-property: opacity;
+  transition-duration: 0.25s;
+}
+.fade-enter-active {
+  transition-delay: 0.25s;
+}
+.fade-enter, .fade-leave-active {
+  opacity: 0
+}
 </style>

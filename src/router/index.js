@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import OfferList from '../components/containers/OfferList'
+import OfferListContainer from '../components/containers/OfferListContainer'
 import MainHomepage from '../components/MainHomepage'
 import OfferContainer from '../components/containers/offer/OfferContainer'
 
@@ -17,9 +17,9 @@ export default new Router({
     },
     {
       name: 'offer-list',
-      path: '/s/:country/:city',
+      path: '/s/:city',
       components: {
-        'list-router-view': OfferList
+        'list-router-view': OfferListContainer
       }
     },
     {

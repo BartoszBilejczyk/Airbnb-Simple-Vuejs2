@@ -2,14 +2,13 @@
   <v-layout column mt-5 mb-5 tag="div" >
     <v-layout row nowrap justify-space-between align-center mt-2 mb-2>
       <PlacesListFeaturedName :city="fullCityName"></PlacesListFeaturedName>
-      <ButtonSeeAll></ButtonSeeAll>
+      <ButtonSeeAll :city="bareCityName"></ButtonSeeAll>
     </v-layout>
     <v-layout row wrap>
       <PlacesListItem
-        v-for="(offer, offerIndex) in cityOffers"
+        v-for="offer in cityOffers"
         :key="offer.id"
         :offer="offer"
-        :offerIndex="offerIndex"
         ></PlacesListItem>
     </v-layout>
   </v-layout>
