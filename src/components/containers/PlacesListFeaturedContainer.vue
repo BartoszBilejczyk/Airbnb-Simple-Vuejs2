@@ -7,6 +7,7 @@
     <v-layout row wrap>
       <PlacesListItem
         v-for="(offer, offerIndex) in cityOffers"
+        :key="offer.id"
         :offer="offer"
         :offerIndex="offerIndex"
         ></PlacesListItem>

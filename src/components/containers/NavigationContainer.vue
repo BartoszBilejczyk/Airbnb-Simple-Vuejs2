@@ -1,18 +1,20 @@
 <template lang="html">
-  <v-layout class="airbnb-navigation-wrapper" row align-center justify-space-around>
-    <v-flex>
-      <LogoItem></LogoItem>
-    </v-flex>
+  <v-container fluid>
+    <v-layout class="airbnb-navigation-wrapper" row align-center justify-space-around>
+      <v-flex>
+        <LogoItem></LogoItem>
+      </v-flex>
 
-    <v-layout class="airbnb-navigation" tag="ul" row justify-end>
-        <NavigationItem
-          class="airbnb-navigation__item"
-          v-for="item in navigationItems"
-          :key="item.name"
-          :navigationItem="item"
-          ></NavigationItem>
+      <v-layout class="airbnb-navigation" tag="ul" row justify-end>
+          <NavigationItem
+            class="airbnb-navigation__item"
+            v-for="item in navigationItems"
+            :key="item.name"
+            :navigationItem="item"
+            ></NavigationItem>
+      </v-layout>
     </v-layout>
-  </v-layout>
+  </v-container>
 </template>
 
 <script>

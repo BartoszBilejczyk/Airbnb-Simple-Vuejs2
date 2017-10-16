@@ -1,6 +1,6 @@
 <template lang="html">
   <v-layout row>
-    <SearchItem v-for="i in 3"></SearchItem>
+    <SearchItem v-for="i in 3" :key="i"></SearchItem>
   </v-layout>
 </template>
 

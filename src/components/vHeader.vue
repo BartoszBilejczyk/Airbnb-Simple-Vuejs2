@@ -1,9 +1,5 @@
 <template lang="html">
   <div>
-    <v-container fluid>
-      <NavigationContainer></NavigationContainer>
-    </v-container>
-
     <v-container mt-5>
       <h1 class="airbnb-heading
                  airbnb-heading--primary
@@ -21,13 +17,11 @@
 </template>
 
 <script>
-import NavigationContainer from './containers/NavigationContainer'
 import SearchContainer from './containers/SearchContainer'
 
 export default {
   name: 'Header',
   components: {
-    NavigationContainer,
     SearchContainer
   }
 }
