@@ -1,27 +1,25 @@
 <template>
-  <div id="app" v-cloak>
-    <!-- <v-app> -->
-      <v-container fluid>
-        <NavigationContainer></NavigationContainer>
-      </v-container>
-      <!-- <router-view name="list-router-view" :type="'page'" :mode="'collection'" :shortList="false"  :category="$route.params.category" :key="$route.params.category"></router-view>
-      <router-view name="page-router-view"></router-view>
-      <router-view name="search-router-view" :type="'page'" :mode="'search'" :key="$route.params.query"></router-view> -->
+  <v-app data-app="true" id="app" class="application--light" v-cloak>
+    <v-container fluid>
+      <NavigationContainer></NavigationContainer>
+    </v-container>
+    <!-- <router-view name="list-router-view" :type="'page'" :mode="'collection'" :shortList="false"  :category="$route.params.category" :key="$route.params.category"></router-view>
+    <router-view name="page-router-view"></router-view>
+    <router-view name="search-router-view" :type="'page'" :mode="'search'" :key="$route.params.query"></router-view> -->
 
-      <v-container>
-        <transition name="fade">
-          <!-- used for homepage / offer page -->
-          <router-view name="page-router-view" :city="$route.params.city" :room-id="$route.params.roomId" :key="$route.params.roomId"></router-view>
-          <!-- used for offer listings -->
-          <router-view name="list-router-view" :city="$route.params.city" :country="$route.params.country" :key="$route.params.city"></router-view>
-          <!-- used for offer listings when searching -->
-          <router-view name="search-router-view" :mode="'search'" :key="$route.params.query"></router-view>
-        </transition>
-      </v-container>
+    <v-container>
+      <transition name="fade">
+        <!-- used for homepage / offer page -->
+        <router-view name="page-router-view" :city="$route.params.city" :room-id="$route.params.roomId" :key="$route.params.roomId"></router-view>
+        <!-- used for offer listings -->
+        <router-view name="list-router-view" :city="$route.params.city" :country="$route.params.country" :key="$route.params.city"></router-view>
+        <!-- used for offer listings when searching -->
+        <router-view name="search-router-view" :mode="'search'" :key="$route.params.query"></router-view>
+      </transition>
+    </v-container>
 
-      <VFooter />
-    <!-- </v-app> -->
-  </div>
+    <VFooter />
+  </v-app>
 </template>
 
 <script>
@@ -47,6 +45,10 @@ html, body {
   font-family: 'Raleway', sans-serif !important;
   box-sizing: border-box;
   overflow-x: hidden !important;
+}
+
+.application {
+  display: block !important;
 }
 
 .application--light {

@@ -5,21 +5,21 @@
         <LogoItem></LogoItem>
       </v-flex>
 
-      <!-- <Authentication /> -->
+      <Authentication />
     </v-layout>
   </v-container>
 </template>
 
 <script>
 import LogoItem from '../LogoItem'
-// import Authentication from './Authentication'
+import Authentication from './Authentication'
 
 export default {
   // Here Vuex data for Navigation
   name: 'NavigationContainer',
   components: {
-    LogoItem
-    // Authentication
+    LogoItem,
+    Authentication
   },
   computed: {
 
