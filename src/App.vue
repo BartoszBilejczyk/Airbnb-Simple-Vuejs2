@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-cloak>
+  <v-app data-app="true" id="app" class="application--light" v-cloak>
     <v-container fluid>
       <NavigationContainer></NavigationContainer>
     </v-container>
@@ -19,7 +19,7 @@
     </v-container>
 
     <VFooter />
-  </div>
+  </v-app>
 </template>
 
 <script>
@@ -45,6 +45,14 @@ html, body {
   font-family: 'Raleway', sans-serif !important;
   box-sizing: border-box;
   overflow-x: hidden !important;
+}
+
+.application {
+  display: block !important;
+}
+
+.application--light {
+  background: pal(white) !important;
 }
 
 p, span {

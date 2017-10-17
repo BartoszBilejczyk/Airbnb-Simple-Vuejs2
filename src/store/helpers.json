@@ -1,4 +1,10 @@
 {
+  "users": {
+    "warsaw": {
+      "city": "Warsaw",
+      "country": "Poland"
+    }
+  },
   "cities": {
     "warsaw": {
       "city": "Warsaw",
