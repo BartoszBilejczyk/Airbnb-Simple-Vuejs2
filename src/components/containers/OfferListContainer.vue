@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="">
-    <v-layout v-if="cityOffers.length > 0" row wrap tag="div">
+    <h1 v-if="cityOffers.length" class="airbnb-heading--secondary">See rooms in <b>{{ fullCityName }}</b></h1>
+    <v-layout v-if="cityOffers.length" row wrap tag="div" mt-5>
       <PlacesListItem
         v-for="offer in cityOffers"
         :key="offer.id"
@@ -9,7 +10,7 @@
         ></PlacesListItem>
     </v-layout>
 
-    <NoResultsPage v-if="cityOffers.length === 0"></NoResultsPage>
+    <NoResultsPage v-if="!cityOffers.length"></NoResultsPage>
   </div>
 </template>
 
@@ -27,6 +28,13 @@ export default {
   computed: {
     city() {
       return this.$route.params.city
+    },
+    fullCityName() {
+      if (this.cityOffers.length) {
+        return this.cityOffers[0].city
+      } else {
+        return 'null'
+      }
     }
   },
   created() {

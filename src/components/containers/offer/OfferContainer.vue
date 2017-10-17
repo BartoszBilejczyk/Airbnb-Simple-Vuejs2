@@ -1,6 +1,6 @@
 <template lang='html'>
   <v-layout column>
-    <img src="https://a0.muscache.com/im/pictures/ae7de678-2533-4918-b17d-3c7d0e9c7b2b.jpg" class="airbnb-offer__image--small" alt="">
+    <img :src="offer.photoURL" class="airbnb-offer__image" alt="">
     <span>{{ offer.type }} | {{ offer.numberOfRooms }} Beds | {{ offer.numberOfGuests }} Guests</span>
     <span>{{ offer.name }}</span>
     <span>${{ offer.price }} per night</span>
@@ -22,10 +22,15 @@ export default {
     }
   },
   created() {
-    this.$bindAsArray('singleOffer', db.ref('offers/' + this.$route.params.city).orderByChild('id').equalTo(this.$route.params.roomId))
+    this.$bindAsArray('singleOffer', db.ref('offers/' + this.$route.params.city).orderByChild('id').equalTo(Number(this.$route.params.roomId)))
   }
 }
 </script>
 
 <style lang="scss">
+
+.airbnb-offer__image {
+    height: auto;
+}
+
 </style>
