@@ -5,33 +5,24 @@
         <LogoItem></LogoItem>
       </v-flex>
 
-      <v-layout class="airbnb-navigation" tag="ul" row justify-end>
-          <NavigationItem
-            class="airbnb-navigation__item"
-            v-for="item in navigationItems"
-            :key="item.name"
-            :navigationItem="item"
-            ></NavigationItem>
-      </v-layout>
+      <!-- <Authentication /> -->
     </v-layout>
   </v-container>
 </template>
 
 <script>
 import LogoItem from '../LogoItem'
-import NavigationItem from '../NavigationItem'
+// import Authentication from './Authentication'
 
 export default {
   // Here Vuex data for Navigation
   name: 'NavigationContainer',
   components: {
-    LogoItem,
-    NavigationItem
+    LogoItem
+    // Authentication
   },
   computed: {
-    navigationItems() {
-      return this.$store.state.navigationItems
-    }
+
   }
 }
 </script>
@@ -39,22 +30,5 @@ export default {
 <style lang="scss" scoped>
 
 @import '../../assets/styles/main.scss';
-
-.airbnb {
-  &-navigation {
-    padding: 0;
-    margin: 0;
-
-    &-wrapper {
-
-    }
-
-    &__item {
-      padding: 10px 20px;
-      list-style: none;
-      @include font(11, 300);
-    }
-  }
-}
 
 </style>

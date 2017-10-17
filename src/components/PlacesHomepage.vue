@@ -9,8 +9,7 @@
 </template>
 
 <script>
-import {auth, db} from '../firebase'
-import firebase from 'firebase'
+import {db} from '../firebase'
 
 import PlacesListFeaturedContainer from './containers/PlacesListFeaturedContainer'
 
@@ -21,18 +20,6 @@ export default {
   },
   firebase: {
     cities: db.ref('cities')
-  },
-  computed: {
-
-  },
-  methods: {
-    signInWithGoogle() {
-      const provider = new firebase.auth.GoogleAuthProvider()
-      auth.signInWithRedirect(provider).then((result) => {
-        this.user = result.user
-      })
-      .catch(err => console.log(err))
-    }
   }
 }
 </script>
