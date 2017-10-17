@@ -10,10 +10,22 @@
     </v-layout>
 
     <v-layout v-else class="airbnb-navigation" tag="ul" row justify-end>
-      <li class="airbnb-navigation__item" @click="signOut(); snackbar = true">
-        Log Out
-      </li>
-
+      <v-menu open-on-hover offset-y nudge-top="-10">
+        <img
+          class="airbnb-navigation__avatar"
+          src="../../assets/images/minion.jpg"
+          alt=""
+          slot="activator"
+          >
+        <v-card>
+          <li class="airbnb-navigation__item">
+            <router-link :to="{ name: 'user-profile'}">Your profile</router-link>
+          </li>
+          <li class="airbnb-navigation__item" @click="signOut(); snackbar = true">
+            Log Out
+          </li>
+        </v-card>
+      </v-menu>
     </v-layout>
 
     <v-dialog v-model="dialog">
@@ -199,6 +211,11 @@ export default {
       padding: 10px 20px;
       list-style: none;
       @include font(11, 300);
+    }
+
+    &__avatar {
+      width: 50px;
+      border-radius: 50px;
     }
   }
 

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import OfferListContainer from '../components/containers/OfferListContainer'
 import MainHomepage from '../components/MainHomepage'
 import OfferContainer from '../components/containers/offer/OfferContainer'
+import UserProfileContainer from '../components/containers/UserProfileContainer'
 
 Vue.use(Router)
 
@@ -25,9 +26,15 @@ export default new Router({
     {
       name: 'offer',
       path: '/:city/rooms/:roomId',
-      // path: '/rooms/',
       components: {
         'page-router-view': OfferContainer
+      }
+    },
+    {
+      name: 'user-profile',
+      path: '/user/profile',
+      components: {
+        'page-router-view': UserProfileContainer
       }
     }
   ]
