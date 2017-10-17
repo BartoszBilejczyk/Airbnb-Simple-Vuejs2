@@ -6,6 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     loggedUser: null,
+    fullSearchQuery: '',
+    searchQuery: '',
     navigationItems: [
       {name: 'Discover hosting', link: '#'},
       {name: 'Sign up', link: '#'},
@@ -20,6 +22,9 @@ export default new Vuex.Store({
     },
     LOGOUT_USER: ({commit}, payload) => {
       commit('LOGOUT_USER_MUTATION', payload)
+    },
+    SEARCH_ROOM: ({commit}, payload) => {
+      commit('SEARCH_ROOM_MUTATION', payload)
     }
   },
   // directly change store
@@ -29,6 +34,10 @@ export default new Vuex.Store({
     },
     LOGOUT_USER_MUTATION: (state, payload) => {
       state.loggedUser = payload
+    },
+    SEARCH_ROOM_MUTATION: (state, payload) => {
+      state.fullSearchQuery = payload.fullSearchQuery
+      state.searchQuery = payload.searchQuery
     }
   }
 })

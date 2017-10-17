@@ -2,10 +2,10 @@
   <div class="">
     <v-layout v-if="!user" class="airbnb-navigation" tag="ul" row justify-end>
       <li class="airbnb-navigation__item" @click="dialog = true; isLoggingIn = false">
-        Sign up
+        <a href="#">Sign up</a>
       </li>
       <li class="airbnb-navigation__item" @click="dialog = true; isLoggingIn = true">
-        Log in
+        <a href="#">Log in</a>
       </li>
     </v-layout>
 

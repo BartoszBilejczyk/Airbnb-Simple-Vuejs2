@@ -1,0 +1,10 @@
+.airbnb {
+
+  &-button {
+    background-color: pal(brand, pink) !important;
+  }
+}
+
+.fullpage {
+  min-height: calc(100vh - 150px);
+}

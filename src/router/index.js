@@ -36,6 +36,13 @@ export default new Router({
       components: {
         'page-router-view': UserProfileContainer
       }
+    },
+    {
+      name: 'search-results',
+      path: '/search/:city',
+      components: {
+        'list-router-view': OfferListContainer
+      }
     }
   ]
 })

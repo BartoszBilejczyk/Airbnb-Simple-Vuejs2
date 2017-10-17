@@ -12,7 +12,7 @@
         <!-- used for homepage / offer page -->
         <router-view name="page-router-view" :city="$route.params.city" :room-id="$route.params.roomId" :key="$route.params.roomId"></router-view>
         <!-- used for offer listings -->
-        <router-view name="list-router-view" :city="$route.params.city" :country="$route.params.country" :key="$route.params.city"></router-view>
+        <router-view name="list-router-view" :city="$route.params.city" :country="$route.params.country" :key="$route.params.city" :query="$store.state.searchQuery"></router-view>
         <!-- used for offer listings when searching -->
         <router-view name="search-router-view" :mode="'search'" :key="$route.params.query"></router-view>
       </transition>

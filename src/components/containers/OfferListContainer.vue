@@ -1,22 +1,28 @@
 <template lang="html">
-  <v-layout row wrap tag="div">
-    <PlacesListItem
-      v-for="offer in cityOffers"
-      :key="offer.id"
-      :offer="offer"
-      :city="city"
-      ></PlacesListItem>
-  </v-layout>
+  <div class="">
+    <v-layout v-if="cityOffers.length > 0" row wrap tag="div">
+      <PlacesListItem
+        v-for="offer in cityOffers"
+        :key="offer.id"
+        :offer="offer"
+        :city="city"
+        ></PlacesListItem>
+    </v-layout>
+
+    <NoResultsPage v-if="cityOffers.length === 0"></NoResultsPage>
+  </div>
 </template>
 
 <script>
 import PlacesListItem from '../PlacesListItem'
+import NoResultsPage from '../NoResultsPage'
 import {db} from '../../firebase'
 
 export default {
   name: 'OfferListContainer',
   components: {
-    PlacesListItem
+    PlacesListItem,
+    NoResultsPage
   },
   computed: {
     city() {
