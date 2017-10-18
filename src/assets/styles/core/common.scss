@@ -3,6 +3,11 @@
   &-button {
     background-color: pal(brand, pink) !important;
   }
+
+  &-error {
+    color: pal(brand, pink);
+    padding: 10px 0;
+  }
 }
 
 .fullpage {

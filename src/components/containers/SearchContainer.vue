@@ -24,6 +24,7 @@
           </v-flex>
         </v-layout>
       </v-card>
+      <p class="airbnb-error">{{ errorMessage }}</p>
     </v-flex>
   </v-layout>
 </template>
@@ -33,7 +34,8 @@ export default {
   name: 'SearchContainer',
   data() {
     return {
-      searchQuery: ''
+      searchQuery: '',
+      errorMessage: ''
     }
   },
   computed: {
@@ -48,9 +50,21 @@ export default {
         fullSearchQuery,
         searchQuery
       }
-      // change searchQuery in vuex for vuex to remember lastQuery
-      this.$store.dispatch('SEARCH_ROOM', payload)
-      this.$router.push('/search/' + searchQuery)
+
+      if (this.searchQuery.length) {
+        // change searchQuery in vuex for vuex to remember lastQuery
+        this.$store.dispatch('SEARCH_ROOM', payload)
+        this.$router.push('/search/' + searchQuery)
+      } else {
+        this.errorMessage = 'Your search query is too short'
+      }
+    }
+  },
+  watch: {
+    searchQuery: function() {
+      if (this.searchQuery) {
+        this.errorMessage = ''
+      }
     }
   }
 }

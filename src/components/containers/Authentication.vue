@@ -223,10 +223,6 @@ export default {
     }
   }
 
-  &-error {
-    color: pal(brand, pink);
-  }
-
   &-authentication-social {
     &__item {
       margin-top: 10px;
