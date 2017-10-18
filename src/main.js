@@ -7,12 +7,18 @@ import VueFire from 'vuefire'
 // import Firebase from 'firebase'
 import router from './router'
 import store from './store'
+import * as VueGoogleMaps from 'vue2-google-maps'
 
 import('../node_modules/vuetify/dist/vuetify.min.css')
 
 Vue.config.productionTip = false
 Vue.use(Vuetify)
 Vue.use(VueFire)
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: 'AIzaSyDTeX9z4yZH_Gs_1v7WtOi4LVgJN0Lt8yA'
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({

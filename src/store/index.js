@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  GoogleMapsApiKey: 'AIzaSyDxrZt-gaUMVZE0585ixxGWUx-dmiuS0og',
   state: {
     loggedUser: null,
     fullSearchQuery: '',

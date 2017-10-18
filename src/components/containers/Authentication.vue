@@ -52,13 +52,17 @@
           <v-btn
             v-if="isLoggingIn"
             block
-            @click="signIn()">
+            @click="signIn()"
+            class="airbnb-button"
+            dark>
               Sign In
           </v-btn>
           <v-btn
             v-else
             block
-            @click="signUp()">
+            @click="signUp()"
+            class="airbnb-button"
+            dark>
               Sign Up
           </v-btn>
 

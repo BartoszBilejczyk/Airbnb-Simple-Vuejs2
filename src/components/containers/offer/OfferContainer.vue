@@ -1,13 +1,17 @@
 <template lang='html'>
   <v-layout column>
-    <img :src="offer.photoURL" class="airbnb-offer__image" alt="">
-    <span>{{ offer.type }} | {{ offer.numberOfRooms }} Beds | {{ offer.numberOfGuests }} Guests</span>
-    <span>{{ offer.name }}</span>
-    <span>${{ offer.price }} per night</span>
-    <v-layout row nowrap align-center>
-      <div class="rating"></div>
-      <span>{{ offer.numberOfRatings }} Ratings</span>
-    </v-layout>
+    <div class="airbnb-offer__image" :style="{ 'background-image': 'url(' + offer.photoURL + ')' }"></div>
+
+    <v-container>
+      <span>{{ offer.type }} | {{ offer.numberOfRooms }} Beds | {{ offer.numberOfGuests }} Guests</span>
+      <span>{{ offer.name }}</span>
+      <span>${{ offer.price }} per night</span>
+      <v-layout row nowrap align-center>
+        <div class="rating"></div>
+        <span>{{ offer.numberOfRatings }} Ratings</span>
+      </v-layout>
+    </v-container>
+
   </v-layout>
 </template>
 
@@ -30,7 +34,10 @@ export default {
 <style lang="scss">
 
 .airbnb-offer__image {
-    height: auto;
+    height: 75vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 </style>

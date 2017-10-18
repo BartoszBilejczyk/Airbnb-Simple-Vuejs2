@@ -11,10 +11,8 @@ export const firebaseApp = Firebase.initializeApp({
 
 const auth = firebaseApp.auth()
 const db = firebaseApp.database()
-// const usersRef = firebaseApp.database().ref('users');
 
 export {
   auth,
   db
-  // usersRef
 }

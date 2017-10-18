@@ -1,17 +1,19 @@
 <template lang="html">
-  <div class="">
-    <h1 v-if="cityOffers.length" class="airbnb-heading--secondary">See rooms in <b>{{ fullCityName }}</b></h1>
-    <v-layout v-if="cityOffers.length" row wrap tag="div" mt-5>
-      <PlacesListItem
-        v-for="offer in cityOffers"
-        :key="offer.id"
-        :offer="offer"
-        :city="city"
-        ></PlacesListItem>
-    </v-layout>
+  <v-layout>
+    <v-container class="">
+      <h1 v-if="cityOffers.length" class="airbnb-heading--secondary">See rooms in <b>{{ fullCityName }}</b></h1>
+      <v-layout v-if="cityOffers.length" row wrap tag="div" mt-5>
+        <PlacesListItem
+          v-for="offer in cityOffers"
+          :key="offer.id"
+          :offer="offer"
+          :city="city"
+          ></PlacesListItem>
+      </v-layout>
 
-    <NoResultsPage v-if="!cityOffers.length"></NoResultsPage>
-  </div>
+      <NoResultsPage v-if="!cityOffers.length"></NoResultsPage>
+    </v-container>
+  </v-layout>
 </template>
 
 <script>

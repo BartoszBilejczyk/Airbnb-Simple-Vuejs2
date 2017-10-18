@@ -42,14 +42,14 @@ export default {
   &--small {
     flex-basis: 25%;
   }
-  //
-  // &__image {
-  //
-  //   &--small {
-  //     height: 100px;
-  //     width: 100px;
-  //   }
-  // }
+
+  &__image {
+
+    &--small {
+      width: 100%;
+      max-height: 100%;
+    }
+  }
 }
 
 .rating {
