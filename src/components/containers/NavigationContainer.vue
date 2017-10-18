@@ -1,9 +1,14 @@
 <template lang="html">
   <v-container fluid>
     <v-layout class="airbnb-navigation-wrapper" row align-center justify-space-around>
-      <v-flex>
+      <v-layout align-center>
         <LogoItem></LogoItem>
-      </v-flex>
+
+        <v-flex xs12 sm8 md6 lg4 ml-4 v-if="$route.path !== '/'">
+          <SearchContainer></SearchContainer>
+        </v-flex>
+        <!-- show search when not on homepage -->
+      </v-layout>
 
       <Authentication />
     </v-layout>
@@ -13,16 +18,17 @@
 <script>
 import LogoItem from '../LogoItem'
 import Authentication from './Authentication'
+import SearchContainer from './SearchContainer'
 
 export default {
   // Here Vuex data for Navigation
   name: 'NavigationContainer',
   components: {
     LogoItem,
-    Authentication
+    Authentication,
+    SearchContainer
   },
   computed: {
-
   }
 }
 </script>

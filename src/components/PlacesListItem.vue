@@ -5,12 +5,13 @@
       <img :src="offer.photoURL" class="airbnb-offer__image--small" alt="">
     </router-link>
     <v-layout column>
-      <span>{{ offer.type }} | {{ offer.numberOfRooms }} Beds | {{ offer.numberOfGuests }} Guests</span>
-      <span>{{ offer.name }}</span>
-      <span>${{ offer.price }} per night</span>
+      <span class="airbnb-offer-types
+                   airbnb-copy--light">{{ offer.type }} | {{ offer.numberOfRooms }} Beds | {{ offer.numberOfGuests }} Guests</span>
+      <span class="airbnb-offer-name">{{ offer.name }}</span>
+      <span class="airbnb-offer-price">${{ offer.price }} per night</span>
       <v-layout row nowrap align-center>
         <div class="rating"></div>
-        <span>{{ offer.numberOfRatings }} Ratings</span>
+        <span class="airbnb-offer-rating-number">{{ offer.numberOfRatings }} Ratings</span>
       </v-layout>
     </v-layout>
   </v-flex>
@@ -49,6 +50,27 @@ export default {
       width: 100%;
       max-height: 100%;
     }
+  }
+
+  &-types {
+    @include font(8, 500);
+    letter-spacing: -0.3px;
+    padding: 5px 0;
+    text-transform: uppercase;
+  }
+
+  &-name {
+    @include font(16, 500);
+    padding: 2px 0;
+  }
+
+  &-price {
+    @include font(13, 400);
+  }
+
+  &-rating-number {
+    @include font(10, 400);
+    padding: 5px 0;
   }
 }
 

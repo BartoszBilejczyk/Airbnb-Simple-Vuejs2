@@ -1,7 +1,7 @@
 <template lang="html">
   <v-layout column mt-5 mb-5 tag="div" >
     <v-layout row nowrap justify-space-between align-center mt-2 mb-2>
-      <PlacesListFeaturedName :city="fullCityName"></PlacesListFeaturedName>
+      <SectionHeading :name="fullCityName"></SectionHeading>
       <ButtonSeeAll :city="bareCityName"></ButtonSeeAll>
     </v-layout>
     <v-layout row wrap>
@@ -18,7 +18,7 @@
 <script>
 import {db} from '../../firebase'
 
-import PlacesListFeaturedName from '../PlacesListFeaturedName'
+import SectionHeading from '../SectionHeading'
 import ButtonSeeAll from '../ButtonSeeAll'
 import PlacesListItem from '../PlacesListItem'
 
@@ -35,7 +35,7 @@ export default {
     }
   },
   components: {
-    PlacesListFeaturedName,
+    SectionHeading,
     ButtonSeeAll,
     PlacesListItem
   },

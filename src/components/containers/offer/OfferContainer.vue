@@ -12,14 +12,33 @@
       </v-layout>
     </v-container>
 
+    <OfferMainInfo></OfferMainInfo>
+    <OfferReviews></OfferReviews>
+    <OfferHostInfo></OfferHostInfo>
+    <OfferNeighbourhood></OfferNeighbourhood>
+    <OfferSimilarOffers></OfferSimilarOffers>
+
   </v-layout>
 </template>
 
 <script>
 import {db} from '../../../firebase'
 
+import OfferMainInfo from '../../offer-items/OfferMainInfo.vue'
+import OfferReviews from '../../offer-items/OfferReviews.vue'
+import OfferHostInfo from '../../offer-items/OfferHostInfo.vue'
+import OfferNeighbourhood from '../../offer-items/OfferNeighbourhood.vue'
+import OfferSimilarOffers from '../../offer-items/OfferSimilarOffers.vue'
+
 export default {
   name: 'OfferContainer',
+  components: {
+    OfferMainInfo,
+    OfferReviews,
+    OfferHostInfo,
+    OfferNeighbourhood,
+    OfferSimilarOffers
+  },
   computed: {
     offer() {
       return this.singleOffer[0]
@@ -34,7 +53,7 @@ export default {
 <style lang="scss">
 
 .airbnb-offer__image {
-    height: 75vh;
+    height: 70vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

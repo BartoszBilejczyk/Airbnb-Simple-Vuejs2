@@ -6,10 +6,10 @@
       @include font(33, 400);
     }
     &--secondary {
-      @include font(22, 400);
+      @include font(26, 400);
     }
     &--tertiary {
-
+      @include font(20, 400);
     }
     &--section {
 
@@ -20,6 +20,10 @@
 
     &--brand {
       color: pal(brand, pink);
+    }
+
+    &--semi-bold {
+      font-weight: 500;
     }
 
     &--bold {
@@ -39,6 +43,10 @@
     }
     &--small {
 
+    }
+
+    &--light {
+      color: pal(gray, light-dark)
     }
   }
 }
