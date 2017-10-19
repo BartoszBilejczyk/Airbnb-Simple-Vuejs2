@@ -24,6 +24,7 @@
           </v-flex>
         </v-layout>
       </v-card>
+      <span class="airbnb-error">{{errorMessage}}</span>
     </v-flex>
   </v-layout>
 </template>
@@ -33,7 +34,8 @@ export default {
   name: 'SearchContainer',
   data() {
     return {
-      searchQuery: ''
+      searchQuery: '',
+      errorMessage: ''
     }
   },
   computed: {
@@ -48,8 +50,13 @@ export default {
         fullSearchQuery,
         searchQuery
       }
-      this.$store.dispatch('SEARCH_ROOM', payload)
-      this.$router.push('/search/' + searchQuery)
+
+      if (this.searchQuery) {
+        this.$store.dispatch('SEARCH_ROOM', payload)
+        this.$router.push('/search/' + searchQuery)
+      } else {
+        this.errorMessage = 'Please provide a destination'
+      }
     }
   },
   watch: {

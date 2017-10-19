@@ -9,7 +9,7 @@
       @include font(26, 400);
     }
     &--tertiary {
-      @include font(20, 400);
+      @include font(23, 700);
     }
     &--section {
 
@@ -37,12 +37,14 @@
 
   &-copy {
     color: pal(brand, copy);
+    @include font(13, 300);
 
     &--large {
 
     }
     &--small {
-
+      margin: 10px 0;
+      @include font(10, 300);
     }
 
     &--light {

@@ -3,20 +3,13 @@
     <div class="airbnb-offer__image" :style="{ 'background-image': 'url(' + offer.photoURL + ')' }"></div>
 
     <v-container>
-      <span>{{ offer.type }} | {{ offer.numberOfRooms }} Beds | {{ offer.numberOfGuests }} Guests</span>
-      <span>{{ offer.name }}</span>
-      <span>${{ offer.price }} per night</span>
-      <v-layout row nowrap align-center>
-        <div class="rating"></div>
-        <span>{{ offer.numberOfRatings }} Ratings</span>
-      </v-layout>
+      <OfferMainInfo :offer="offer"></OfferMainInfo>
+      <OfferReviews :offer="offer"></OfferReviews>
+      <OfferHostInfo :offer="offer"></OfferHostInfo>
+      <OfferNeighbourhood :offer="offer"></OfferNeighbourhood>
+      <OfferSimilarOffers :offer="offer"></OfferSimilarOffers>
     </v-container>
 
-    <OfferMainInfo></OfferMainInfo>
-    <OfferReviews></OfferReviews>
-    <OfferHostInfo></OfferHostInfo>
-    <OfferNeighbourhood></OfferNeighbourhood>
-    <OfferSimilarOffers></OfferSimilarOffers>
 
   </v-layout>
 </template>
@@ -52,11 +45,23 @@ export default {
 
 <style lang="scss">
 
+@import '../../../assets/styles/main.scss';
+
 .airbnb-offer__image {
-    height: 70vh;
+    height: 60vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+
+    @include md-up {
+      height: 70vh;
+    }
+}
+
+.rating {
+  height: 10px;
+  width: 80px;
+  background: pal(brand, cyan);
 }
 
 </style>

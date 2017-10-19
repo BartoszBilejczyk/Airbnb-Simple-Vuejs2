@@ -52,7 +52,7 @@ html, body {
 }
 
 p, span {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Open Sans', sans-serif !important;
 }
 
 a {
