@@ -1,23 +1,39 @@
 <template lang="html">
-  <v-icon v-if="this.$store.state.currentUser"
-          large
-          :style="likeIconPositioning"
-          :class="{'airbnb-liked': isLiked}"
-          @click="isLiked ? deleteOfferFromFavourites() : addOfferToFavourites()">favorite</v-icon>
+  <div class="">
+    <v-icon v-if="this.$store.state.currentUser"
+            large
+            :style="likeIconPositioning"
+            :class="{'airbnb-liked': isLiked}"
+            @click="isLiked ? deleteOfferFromFavourites() : addOfferToFavourites(); snackbar = true">favorite</v-icon>
+    <v-snackbar
+      top
+      :timeout="timeout"
+      :color="color"
+      :multi-line="mode === 'multi-line'"
+      :vertical="mode === 'vertical'"
+      v-model="snackbar"
+    >
+      {{ isLiked ? 'You have added this room to favourites' : 'You have deleted this room from favourites'}}
+      <v-btn dark flat @click.native="snackbar = false">Close</v-btn>
+    </v-snackbar>
+  </div>
+
 </template>
 
 <script>
 import {db} from '../firebase'
+import firebase from 'firebase'
+
 export default {
   name: 'ButtonLikeOffer',
   props: {
     topPosition: {
       type: String,
-      default: 0
+      default: '0'
     },
     leftPosition: {
       type: String,
-      default: 0
+      default: '0'
     },
     offer: {
       type: Object,
@@ -31,14 +47,28 @@ export default {
         top: this.topPosition,
         left: this.leftPosition
       },
-      isLiked: false
+      isLiked: false,
+      // snackbar when liking/disliking offer
+      snackbar: false,
+      color: '',
+      mode: '',
+      timeout: 6000
     }
   },
-  firebase: {
-    favourites: db.ref('favourites')
-    // cityOffers: db.ref(`offers/${city}`)
+  computed: {
+
   },
   methods: {
+    getUsersFavourites() {
+      // return item which from favourites which has offer's id
+      let userFavourites = db.ref(`favourites/${this.$store.state.currentUser.uid}`).orderByChild('id').equalTo(this.offer.id)
+      userFavourites.on('value', snapshot => {
+        // check if it matches (which makes response != null), if true, set heart to red
+        if (snapshot.val()) {
+          this.isLiked = true
+        }
+      })
+    },
     addOfferToFavourites() {
       let offer = this.offer
       let uid = this.$store.state.currentUser.uid
@@ -54,20 +84,28 @@ export default {
         photoURL: offer.photoURL,
         price: offer.price,
         rating: offer.rating,
-        type: offer.type
+        type: offer.type,
+        liked: true
       })
 
       this.isLiked = true
     },
     deleteOfferFromFavourites() {
-      // this.$firebaseRefs.users.push({uid: result.uid, providerData: result.providerData})
-      // let user = this.$store.state.currentUser
-      // user.updateProfile({
-      //   favourite
-      // })
+      let query = db.ref(`favourites/${this.$store.state.currentUser.uid}`).orderByChild('id').equalTo(this.offer.id)
+      query.on('child_added', snapshot => {
+        snapshot.ref.remove()
+      })
+
       this.isLiked = false
-      console.log('deleted')
     }
+  },
+  created() {
+    this.$bindAsObject('favourites', db.ref(`favourites`))
+  },
+  beforeCreate() {
+    firebase.auth().onAuthStateChanged(() => {
+      this.getUsersFavourites()
+    })
   }
 }
 </script>

@@ -5,7 +5,7 @@
     </div>
     <v-layout row wrap>
       <PlacesListItem
-        v-for="offer in favourites"
+        v-for="offer in userFavourites"
         :city="offer.city"
         :offer="offer"
         >
@@ -33,7 +33,7 @@ export default {
   },
   created() {
     let uid = this.user.uid
-    this.$bindAsArray('favourites', db.ref(`favourites/${uid}`))
+    this.$bindAsArray('userFavourites', db.ref(`favourites/${uid}`))
   }
 }
 </script>
