@@ -1,10 +1,13 @@
 <template lang="html">
   <v-container fluid>
-    <v-layout class="airbnb-navigation-wrapper" row align-center justify-space-around>
+    <v-layout class="airbnb-navigation-wrapper" row wrap align-center justify-space-around>
       <v-layout align-center>
         <LogoItem></LogoItem>
 
-        <v-flex xs12 sm8 md6 lg4 ml-4 v-if="$route.path !== '/'">
+        <v-flex
+          xs12 sm8 md6 lg4 ml-4
+          v-if="$route.path !== '/'"
+          hidden-sm-and-down>
           <SearchContainer></SearchContainer>
         </v-flex>
         <!-- show search when not on homepage -->
@@ -12,6 +15,12 @@
 
       <Authentication />
     </v-layout>
+    <v-flex
+      mt-4 mb-1
+      v-if="$route.path !== '/'"
+      hidden-sm-and-up>
+      <SearchContainer></SearchContainer>
+    </v-flex>
   </v-container>
 </template>
 
