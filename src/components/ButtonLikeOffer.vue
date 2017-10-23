@@ -1,19 +1,26 @@
 <template lang="html">
-  <v-icon large
+  <v-icon v-if="this.$store.state.currentUser"
+          large
           :style="likeIconPositioning"
-          :class="airbnb-liked">favorite</v-icon>
+          :class="{'airbnb-liked': isLiked}"
+          @click="isLiked ? deleteOfferFromFavourites() : addOfferToFavourites()">favorite</v-icon>
 </template>
 
 <script>
+import {db} from '../firebase'
 export default {
   name: 'ButtonLikeOffer',
   props: {
     topPosition: {
       type: String,
-      required: true
+      default: 0
     },
     leftPosition: {
       type: String,
+      default: 0
+    },
+    offer: {
+      type: Object,
       required: true
     }
   },
@@ -23,8 +30,47 @@ export default {
         position: 'absolute',
         top: this.topPosition,
         left: this.leftPosition
-      }
+      },
+      isLiked: false
     }
+  },
+  firebase: {
+    favourites: db.ref('favourites')
+    // cityOffers: db.ref(`offers/${city}`)
+  },
+  methods: {
+    addOfferToFavourites() {
+      let offer = this.offer
+      let uid = this.$store.state.currentUser.uid
+
+      this.$firebaseRefs.favourites.child(uid).push({
+        city: offer.city,
+        description: offer.description,
+        id: offer.id,
+        name: offer.name,
+        numberOfGuests: offer.numberOfGuests,
+        numberOfRatings: offer.numberOfRatings,
+        numberOfRooms: offer.numberOfRooms,
+        photoURL: offer.photoURL,
+        price: offer.price,
+        rating: offer.rating,
+        type: offer.type
+      })
+
+      this.isLiked = true
+    },
+    deleteOfferFromFavourites() {
+      // this.$firebaseRefs.users.push({uid: result.uid, providerData: result.providerData})
+      // let user = this.$store.state.currentUser
+      // user.updateProfile({
+      //   favourite
+      // })
+      this.isLiked = false
+      console.log('deleted')
+    }
+  },
+  created() {
+    // this.$bindAsArray('favourites', db.ref('favourites'))
   }
 }
 </script>

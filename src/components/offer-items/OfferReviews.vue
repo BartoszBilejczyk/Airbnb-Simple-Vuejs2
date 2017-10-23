@@ -2,33 +2,32 @@
   <v-layout column mt-5 mb-5>
     <v-layout row align-center>
       <h2 class="airbnb-heading airbnb-heading--tertiary">{{ offer.numberOfRatings }} Reviews</h2>
-      <div class="rating"></div>
     </v-layout>
     <hr>
 
-    <v-layout column>
-      <v-flex xs12 sm8 md6 lg4>
+    <v-layout column mt-2 mb-3>
+      <v-flex xs12 sm8 md6 lg5>
         <v-layout row align-center justify-space-between>
           <span class="airbnb-copy">Accuracy</span>
-          <div class="rating"></div>
+          <img src="../../assets/images/rating.png" alt="Offer rating">
         </v-layout>
       </v-flex>
-      <v-flex xs12 sm8 md6 lg4>
+      <v-flex xs12 sm8 md6 lg5>
         <v-layout row align-center justify-space-between>
           <span class="airbnb-copy">Communication</span>
-          <div class="rating"></div>
+          <img src="../../assets/images/rating.png" alt="Offer rating">
         </v-layout>
       </v-flex>
-      <v-flex xs12 sm8 md6 lg4>
+      <v-flex xs12 sm8 md6 lg5>
         <v-layout row align-center justify-space-between>
           <span class="airbnb-copy">Cleanliness</span>
-          <div class="rating"></div>
+          <img src="../../assets/images/rating.png" alt="Offer rating">
         </v-layout>
       </v-flex>
-      <v-flex xs12 sm8 md6 lg4>
+      <v-flex xs12 sm8 md6 lg5>
         <v-layout row align-center justify-space-between>
           <span class="airbnb-copy">Location</span>
-          <div class="rating"></div>
+          <img src="../../assets/images/rating.png" alt="Offer rating">
         </v-layout>
       </v-flex>
     </v-layout>

@@ -13,3 +13,12 @@
 .fullpage {
   min-height: calc(100vh - 150px);
 }
+
+@media only screen and (min-width: 1904px) {
+  .container {
+      max-width: 1350px !important;
+  }
+  .container.fluid {
+      max-width: 100% !important;
+  }
+}

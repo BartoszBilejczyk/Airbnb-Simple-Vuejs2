@@ -10,7 +10,7 @@
     </v-layout>
 
     <v-layout v-else class="airbnb-navigation" tag="ul" row justify-end>
-      <v-menu open-on-hover offset-y nudge-top="-10">
+      <v-menu open-on-hover offset-y nudge-top=10>
         <img
           class="airbnb-navigation__avatar"
           src="../../assets/images/minion.jpg"
@@ -31,6 +31,8 @@
     <v-dialog v-model="dialog">
       <v-card>
         <v-layout pr-4 pl-4 pt-4 pb-4 column>
+          <span class="airbnb-heading
+                       airbnb-heading--tertiary">{{ isLoggingIn ? 'Log in' : 'Sign up' }}</span>
           <div>
             <v-text-field
               label="Email"
@@ -66,8 +68,7 @@
               Sign Up
           </v-btn>
 
-          <v-layout v-if="isLoggingIn"
-                    class="grey--text
+          <v-layout class="grey--text
                            grey-lighten-4"
                     mt-2 mb-2 column>
             <span class="text-xs-center">or</span>
@@ -146,7 +147,7 @@ export default {
   },
   computed: {
     user() {
-      return this.$store.state.loggedUser
+      return this.$store.state.currentUser
     }
   },
   methods: {

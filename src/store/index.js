@@ -6,7 +6,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   GoogleMapsApiKey: 'AIzaSyDxrZt-gaUMVZE0585ixxGWUx-dmiuS0og',
   state: {
-    loggedUser: null,
+    currentUser: null,
     fullSearchQuery: '',
     searchQuery: '',
     navigationItems: [
@@ -31,10 +31,10 @@ export default new Vuex.Store({
   // directly change store
   mutations: {
     LOGIN_USER_MUTATION: (state, payload) => {
-      state.loggedUser = payload
+      state.currentUser = payload
     },
     LOGOUT_USER_MUTATION: (state, payload) => {
-      state.loggedUser = payload
+      state.currentUser = payload
     },
     SEARCH_ROOM_MUTATION: (state, payload) => {
       state.fullSearchQuery = payload.fullSearchQuery

@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="box">
-
+    Placeholder for reservation box
   </div>
 </template>
 

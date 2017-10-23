@@ -10,14 +10,14 @@
       <span class="airbnb-offer-name">{{ offer.name }}</span>
       <span class="airbnb-offer-price">${{ offer.price }} per night</span>
       <v-layout row nowrap align-center>
-        <div class="rating"></div>
+        <img src="../assets/images/rating.png" alt="Offer rating">
         <span class="airbnb-offer-rating-number">{{ offer.numberOfRatings }} Ratings</span>
       </v-layout>
     </v-layout>
     <ButtonLikeOffer
-      v-if="this.$store.state.loggedUser"
       topPosition="10px"
-      leftPosition="calc(100% - 50px)"></ButtonLikeOffer>
+      leftPosition="calc(100% - 50px)"
+      :offer="offer"></ButtonLikeOffer>
 
   </v-flex>
 

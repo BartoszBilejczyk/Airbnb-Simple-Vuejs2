@@ -12,7 +12,7 @@ export default {
   },
   computed: {
     user() {
-      return this.$store.state.loggedUser
+      return this.$store.state.currentUser
     }
   }
 }
