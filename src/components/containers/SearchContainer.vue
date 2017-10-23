@@ -74,7 +74,7 @@ export default {
 @import '../../assets/styles/main.scss';
 
 input {
-  padding: 20px;
+  padding: 10px 0;
   outline: none;
   width: 100%;
 }

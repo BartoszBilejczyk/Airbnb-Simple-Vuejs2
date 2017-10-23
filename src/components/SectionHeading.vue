@@ -18,6 +18,4 @@ export default {
 
 @import '../assets/styles/main.scss';
 
-
-
 </style>

@@ -3,11 +3,25 @@
     <div class="airbnb-offer__image" :style="{ 'background-image': 'url(' + offer.photoURL + ')' }"></div>
 
     <v-container>
-      <OfferMainInfo :offer="offer"></OfferMainInfo>
-      <OfferReviews :offer="offer"></OfferReviews>
-      <OfferHostInfo :offer="offer"></OfferHostInfo>
-      <OfferNeighbourhood :offer="offer"></OfferNeighbourhood>
-      <OfferSimilarOffers :offer="offer"></OfferSimilarOffers>
+      <v-layout row>
+        <v-flex xs12 md7>
+          <OfferMainInfo :offer="offer"></OfferMainInfo>
+          <v-flex hidden-md-and-up>
+            <OfferReservation :offer="offer"></OfferReservation>
+          </v-flex>
+          <OfferReviews :offer="offer"></OfferReviews>
+          <OfferHostInfo :offer="offer"></OfferHostInfo>
+          <OfferNeighbourhood :offer="offer"></OfferNeighbourhood>
+          <OfferSimilarOffers :offer="offer"></OfferSimilarOffers>
+        </v-flex>
+        <v-flex
+          md5
+          hidden-sm-and-down
+          pl-5>
+          <OfferReservation :offer="offer"></OfferReservation>
+        </v-flex>
+      </v-layout>
+
     </v-container>
 
 
@@ -22,6 +36,7 @@ import OfferReviews from '../../offer-items/OfferReviews.vue'
 import OfferHostInfo from '../../offer-items/OfferHostInfo.vue'
 import OfferNeighbourhood from '../../offer-items/OfferNeighbourhood.vue'
 import OfferSimilarOffers from '../../offer-items/OfferSimilarOffers.vue'
+import OfferReservation from '../../offer-items/OfferReservation.vue'
 
 export default {
   name: 'OfferContainer',
@@ -30,7 +45,8 @@ export default {
     OfferReviews,
     OfferHostInfo,
     OfferNeighbourhood,
-    OfferSimilarOffers
+    OfferSimilarOffers,
+    OfferReservation
   },
   computed: {
     offer() {

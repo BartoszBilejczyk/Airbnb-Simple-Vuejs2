@@ -1,6 +1,7 @@
 <template lang="html">
   <v-layout column mt-4 mb-5>
-    <h1 class="airbnb-heading airbnb-heading--tertiary">{{ offer.name }}</h1>
+    <h1 class="airbnb-heading airbnb-heading--secondary">{{ offer.name }}</h1>
+    <h2 class="airbnb-heading airbnb-heading--tertiary">${{ offer.price }} per night</h2>
     <v-layout row align-center class="airbnb-copy airbnb-copy--small airbnb-copy--light">
       <span>{{ offer.type }} | </span>
       <div class="rating"></div>

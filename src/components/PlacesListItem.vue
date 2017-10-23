@@ -14,13 +14,20 @@
         <span class="airbnb-offer-rating-number">{{ offer.numberOfRatings }} Ratings</span>
       </v-layout>
     </v-layout>
+    <ButtonLikeOffer
+      v-if="this.$store.state.loggedUser"
+      topPosition="10px"
+      leftPosition="calc(100% - 50px)"></ButtonLikeOffer>
+
   </v-flex>
 
 </template>
 
 <script>
 // import {db} from '../firebase'
+import ButtonLikeOffer from './ButtonLikeOffer'
 export default {
+  name: 'PlacesListItem',
   props: {
     offer: {
       type: Object,
@@ -30,6 +37,9 @@ export default {
       type: String,
       required: true
     }
+  },
+  components: {
+    ButtonLikeOffer
   }
 }
 </script>
@@ -39,13 +49,12 @@ export default {
 @import '../assets/styles/main.scss';
 
 .airbnb-offer {
-
   &--small {
     flex-basis: 25%;
+    position: relative;
   }
 
   &__image {
-
     &--small {
       width: 100%;
       max-height: 100%;
