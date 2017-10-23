@@ -68,9 +68,6 @@ export default {
       this.isLiked = false
       console.log('deleted')
     }
-  },
-  created() {
-    // this.$bindAsArray('favourites', db.ref('favourites'))
   }
 }
 </script>
