@@ -11,6 +11,9 @@
     &--tertiary {
       @include font(23, 700);
     }
+    &--fourth-type {
+      @include font(18, 400);
+    }
     &--section {
 
     }
@@ -29,6 +32,10 @@
     &--bold {
       font-weight: 700;
     }
+
+    &--white {
+      color: pal(white);
+    }
   }
 
   &-subheading {
@@ -40,7 +47,7 @@
     @include font(13, 300);
 
     &--large {
-
+      @include font(15, 300);
     }
     &--small {
       margin: 10px 0;
@@ -49,6 +56,10 @@
 
     &--light {
       color: pal(gray, light-dark)
+    }
+
+    &--white {
+      color: pal(white)
     }
   }
 }

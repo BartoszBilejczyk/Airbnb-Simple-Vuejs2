@@ -1,7 +1,10 @@
 .airbnb {
-
   &-button {
     background-color: pal(brand, pink) !important;
+
+    &--block {
+      width: 100%;
+    }
   }
 
   &-error {

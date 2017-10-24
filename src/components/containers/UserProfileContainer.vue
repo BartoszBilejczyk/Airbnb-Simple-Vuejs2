@@ -3,9 +3,11 @@
     <div class="">
       {{ user }}
     </div>
+    <h2 class="airbnb-heading--secondary">Saved rooms</h2>
     <v-layout row wrap>
       <PlacesListItem
         v-for="offer in userFavourites"
+        :key="offer.id"
         :city="offer.city"
         :offer="offer"
         >
@@ -38,5 +40,5 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="css" scoped>
 </style>

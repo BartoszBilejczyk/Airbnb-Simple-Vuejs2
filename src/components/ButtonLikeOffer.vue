@@ -2,9 +2,11 @@
   <div class="">
     <v-icon v-if="this.$store.state.currentUser"
             large
+            slot="activator"
             :style="likeIconPositioning"
             :class="{'airbnb-liked': isLiked}"
-            @click="isLiked ? deleteOfferFromFavourites() : addOfferToFavourites(); snackbar = true">favorite</v-icon>
+            @click="addOfferToFavourites(); snackbar = true">favorite</v-icon>
+
     <v-snackbar
       top
       :timeout="timeout"
@@ -73,7 +75,7 @@ export default {
       let offer = this.offer
       let uid = this.$store.state.currentUser.uid
 
-      this.$firebaseRefs.favourites.child(uid).push({
+      db.ref(`favourites`).child(uid).push({
         city: offer.city,
         description: offer.description,
         id: offer.id,
@@ -89,6 +91,7 @@ export default {
       })
 
       this.isLiked = true
+      console.log('added')
     },
     deleteOfferFromFavourites() {
       let query = db.ref(`favourites/${this.$store.state.currentUser.uid}`).orderByChild('id').equalTo(this.offer.id)
@@ -97,10 +100,13 @@ export default {
       })
 
       this.isLiked = false
+
+      // TODO // There is something wrong when I add rooms to favourites, they're added and immediately deleted from firebase
     }
   },
   created() {
     this.$bindAsObject('favourites', db.ref(`favourites`))
+    // this.getUsersFavourites()
   },
   beforeCreate() {
     firebase.auth().onAuthStateChanged(() => {

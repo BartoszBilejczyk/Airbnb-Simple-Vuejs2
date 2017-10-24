@@ -13,7 +13,7 @@
       <v-flex>
         <v-layout row justify-end align-center>
           <span class="airbnb-copy">Report</span>
-          <v-btn>Helpful</v-btn>
+          <v-btn @click="numberOfHelpfulTicks++">Helpful {{ numberOfHelpfulTicks ? `+${numberOfHelpfulTicks}` : '' }}</v-btn>
         </v-layout>
       </v-flex>
     </v-layout>
@@ -26,7 +26,12 @@
 
 <script>
 export default {
-
+  name: 'OfferReviewsItem',
+  data() {
+    return {
+      numberOfHelpfulTicks: 0
+    }
+  }
 }
 </script>
 

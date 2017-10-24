@@ -54,12 +54,12 @@ export default {
   },
   created() {
     // this.$bindAsArray('cityOffers', db.ref(`offers/${this.city}`))
-    this.$bindAsArray('cityOffers', db.ref('offers/' + this.bareCityName).limitToLast(4))
+    this.$bindAsArray('cityOffers', db.ref('offers/' + this.bareCityName).limitToFirst(4))
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 @import '../../assets/styles/main.scss';
 
