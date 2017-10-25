@@ -1,10 +1,13 @@
 <template lang="html">
-  <v-layout column mt-5 mb-5 tag="div" >
+  <v-layout column mt-5 mb-5 tag="div">
     <v-layout row nowrap justify-space-between align-center mt-2 mb-2>
       <SectionHeading :name="fullCityName"></SectionHeading>
       <ButtonSeeAll :city="bareCityName"></ButtonSeeAll>
     </v-layout>
     <v-layout row wrap>
+      <v-layout v-if="!cityOffers.length" align-center justify-center>
+        <v-progress-circular indeterminate color="primary"></v-progress-circular>
+      </v-layout>
       <PlacesListItem
         v-for="offer in cityOffers"
         :key="offer.id"

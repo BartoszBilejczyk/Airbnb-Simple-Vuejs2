@@ -1,7 +1,7 @@
 <template lang="html">
-  <v-layout column align-center justify-center tag="div" class="fullpage">
-    <v-layout column mb-5 class="text-xs-center">
-      <h1 class="airbnb-heading--secondary">No results found for '{{ this.$store.state.fullSearchQuery }}'</h1>
+  <v-layout column align-center justify-center tag="div" class="fullpage airbnb-no-results-wrapper">
+    <v-layout column mb-5 class="text-xs-center airbnb-no-results">
+      <h1 class="airbnb-heading--secondary">No results found for <b>{{ this.$store.state.fullSearchQuery }}</b></h1>
 
       <p class="airbnb-copy">We couldn't find any rooms in the city you searched for.</p>
 
@@ -21,7 +21,7 @@
       </v-layout>
     </v-layout>
 
-    <img src="../assets/images/seat.jpg" alt="">
+    <img src="../assets/images/seat.jpg" class="airbnb-no-results-image">
   </v-layout>
 </template>
 
@@ -45,4 +45,20 @@ export default {
 
 @import '../assets/styles/main.scss';
 
+.airbnb {
+  &-no-results {
+    max-height: 250px;
+
+    &-wrapper {
+      @include md-up {
+        padding: 50px 0;
+      }
+    }
+    &-image {
+      @include md-up {
+        max-width: 30vw;
+      }
+    }
+  }
+}
 </style>
