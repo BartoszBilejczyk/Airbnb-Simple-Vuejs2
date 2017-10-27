@@ -1,44 +1,59 @@
 <template lang="html">
-  <v-container>
-    <div class="">
-      {{ user }}
-    </div>
-    <h2 class="airbnb-heading--secondary">Saved rooms</h2>
-    <v-layout row wrap>
-      <PlacesListItem
-        v-for="offer in userFavourites"
-        :key="offer.id"
-        :city="offer.city"
-        :offer="offer"
-        >
-        {{ offer }}
-      </PlacesListItem>
-    </v-layout>
-
-  </v-container>
-
+  <v-tabs light fixed icons centered>
+    <v-tabs-bar >
+      <v-tabs-slider color="black"></v-tabs-slider>
+      <v-tabs-item v-for="tab in tabs" :key="tab.id" :href="tab.id">
+        <v-icon dark>{{ tab.icon }}</v-icon>
+        {{ tab.text }}
+      </v-tabs-item>
+    </v-tabs-bar>
+    <v-tabs-items>
+      <v-container>
+        <v-tabs-content id="tab-1">
+          <UserProfileMainInfo></UserProfileMainInfo>
+        </v-tabs-content>
+        <v-tabs-content id="tab-2">
+          <UserProfileFavourites></UserProfileFavourites>
+        </v-tabs-content>
+        <v-tabs-content id="tab-3">
+          <UserProfileBecomeAHost></UserProfileBecomeAHost>
+        </v-tabs-content>
+      </v-container>
+    </v-tabs-items>
+  </v-tabs>
 </template>
 
 <script>
-import {db} from '../../firebase'
-import PlacesListItem from '../PlacesListItem'
+import UserProfileMainInfo from '../dashboard/UserProfileMainInfo'
+import UserProfileFavourites from '../dashboard/UserProfileFavourites'
+import UserProfileBecomeAHost from '../dashboard/UserProfileBecomeAHost'
 
 export default {
   name: 'UserProfileContainer',
-  components: {
-    PlacesListItem
-  },
-  computed: {
-    user() {
-      return this.$store.state.currentUser
+  data() {
+    return {
+      tabs: [
+        {icon: 'account_box', text: 'Profile', id: '#tab-1'},
+        {icon: 'favorite', text: 'Favourites', id: '#tab-2'},
+        {icon: 'account_box', text: 'Become a Host', id: '#tab-3'}
+      ],
+      mama: 'sd'
     }
   },
-  created() {
-    let uid = this.user.uid
-    this.$bindAsArray('userFavourites', db.ref(`favourites/${uid}`))
+  components: {
+    UserProfileMainInfo,
+    UserProfileFavourites,
+    UserProfileBecomeAHost
   }
 }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
+@import '../../assets/styles/main.scss';
+
+.tabs__bar {
+  background-color: pal(brand, pink);
+  color: white !important;
+}
+
 </style>

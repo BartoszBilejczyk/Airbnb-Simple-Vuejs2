@@ -119,8 +119,8 @@ export default {
   data() {
     return {
       dialog: false,
-      email: '',
-      password: '',
+      email: 'biley94@gmail.com',
+      password: 'biley1',
       isLoggingIn: true,
       errorMessage: '',
 

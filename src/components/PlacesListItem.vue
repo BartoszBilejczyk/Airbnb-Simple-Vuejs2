@@ -1,7 +1,7 @@
 <template lang="html">
   <v-flex xs12 sm6 md3 pl-2 pr-2 pt-2 pb-2
        class="airbnb-offer--small">
-    <router-link :to="{name: 'offer', params: {city: city, roomId: offer.id}}">
+    <router-link :to="{name: 'offer', params: {city: bareCityName, roomId: offer.id}}">
       <img :src="offer.photoURL" class="airbnb-offer__image--small" alt="">
     </router-link>
     <v-layout column>
@@ -36,6 +36,11 @@ export default {
     city: {
       type: String,
       required: true
+    }
+  },
+  computed: {
+    bareCityName() {
+      return this.city.replace(/\s/g, '').toLowerCase()
     }
   },
   components: {

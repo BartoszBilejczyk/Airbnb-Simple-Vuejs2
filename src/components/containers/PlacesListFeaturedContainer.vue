@@ -12,7 +12,7 @@
         v-for="offer in cityOffers"
         :key="offer.id"
         :offer="offer"
-        :city="bareCityName"
+        :city="fullCityName"
         ></PlacesListItem>
     </v-layout>
   </v-layout>
