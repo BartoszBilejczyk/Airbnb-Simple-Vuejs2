@@ -10,7 +10,10 @@
         {{ offer }}
       </PlacesListItem>
     </v-layout>
-    <v-btn class="airbnb-button" dark>See all</v-btn>
+    <vButton></vButton>
+    <router-link :to="{ name: '', params: {} }">
+      <v-btn class="airbnb-button" dark>See all</v-btn>
+    </router-link>
   </v-layout>
 </template>
 

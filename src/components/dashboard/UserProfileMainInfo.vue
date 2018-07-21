@@ -1,7 +1,7 @@
 <template lang="html">
   <v-layout row wrap>
-    <v-layout align-center justify-center>
-      <v-flex md5 mt-4 mb-4>
+    <v-layout row wrap align-center justify-center>
+      <v-flex xs12 md5 mt-4 mb-4>
         <v-card>
           <v-layout column pt-3 pb-3 pr-3 pl-3>
             <img
@@ -16,14 +16,14 @@
           </v-layout>
         </v-card>
       </v-flex>
-      <v-flex md6 offset-md1 mt-4 mb-4>
+      <v-flex xs12 md6 offset-md1 mt-4 mb-4>
         <v-card>
           <UserProfileMainBecomeAHost></UserProfileMainBecomeAHost>
         </v-card>
       </v-flex>
     </v-layout>
 
-    <v-flex mt-4 mb-4>
+    <v-flex xs12 mt-4 mb-4>
       <v-card>
         <UserProfileMainInfoFavourites :userFavourites="userFavourites"></UserProfileMainInfoFavourites>
       </v-card>
