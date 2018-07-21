@@ -245,4 +245,8 @@ export default {
   }
 }
 
+.v-dialog:not(.v-dialog--fullscreen) {
+  width: 200px;
+}
+
 </style>

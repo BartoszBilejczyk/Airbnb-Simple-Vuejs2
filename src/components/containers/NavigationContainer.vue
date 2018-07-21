@@ -1,5 +1,5 @@
 <template lang="html">
-  <v-container fluid>
+  <v-container fluid class="airbnb-navigation-wrapper">
     <v-layout class="airbnb-navigation-wrapper" row wrap align-center justify-space-around>
       <v-layout align-center>
         <LogoItem></LogoItem>
@@ -13,7 +13,7 @@
         <!-- show search when not on homepage -->
       </v-layout>
 
-      <Authentication />
+      <!-- <Authentication /> -->
     </v-layout>
     <v-flex
       mt-4 mb-1
@@ -26,7 +26,7 @@
 
 <script>
 import LogoItem from '../LogoItem'
-import Authentication from './Authentication'
+// import Authentication from './Authentication'
 import SearchContainer from './SearchContainer'
 
 export default {
@@ -34,7 +34,7 @@ export default {
   name: 'NavigationContainer',
   components: {
     LogoItem,
-    Authentication,
+    // Authentication,
     SearchContainer
   },
   computed: {
@@ -45,5 +45,9 @@ export default {
 <style lang="scss" scoped>
 
 @import '../../assets/styles/main.scss';
+
+.airbnb-navigation-wrapper {
+  max-height: 100px;
+}
 
 </style>

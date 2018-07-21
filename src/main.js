@@ -1,8 +1,6 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import Vuetify from 'vuetify'
-import App from './App'
+import App from './App.vue'
 import VueFire from 'vuefire'
 // import Firebase from 'firebase'
 import router from './router'
@@ -20,11 +18,8 @@ Vue.use(VueGoogleMaps, {
   }
 })
 
-/* eslint-disable no-new */
 new Vue({
-  el: '#app',
   router,
   store,
-  template: '<App/>',
-  components: { App }
-})
+  render: h => h(App)
+}).$mount('#app')

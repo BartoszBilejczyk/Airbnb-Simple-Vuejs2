@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import OfferListContainer from '../components/containers/OfferListContainer'
-import MainHomepage from '../components/MainHomepage'
-import OfferContainer from '../components/containers/offer/OfferContainer'
-import UserProfileContainer from '../components/containers/UserProfileContainer'
+import OfferListContainer from './components/containers/OfferListContainer'
+import MainHomepage from './components/MainHomepage'
+import OfferContainer from './components/containers/offer/OfferContainer'
+import UserProfileContainer from './components/containers/UserProfileContainer'
 
 Vue.use(Router)
 

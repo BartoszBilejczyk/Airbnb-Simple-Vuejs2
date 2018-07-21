@@ -7,7 +7,7 @@
       <PlacesListFeaturedContainer
         v-for="(city, index) in cities"
         :index="index"
-        key="city.city"
+        :key="city.city"
         :cities="cities"></PlacesListFeaturedContainer>
     </div>
 
